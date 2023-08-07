@@ -3,7 +3,7 @@ let status = 'student'
 let count = 0
 let month = ''
 
-if (date = 2050) {
+if (date == 2050) {
 	console.log("January", 'New Year’s Day')
 	console.log("March", 'Human Rights Day')
 	month = 'April'
@@ -11,7 +11,7 @@ if (date = 2050) {
 	console.log(month, 'Freedom Day')
     count = count + 4
 
-	if (status = "student") {
+	if (status == "student") {
 	    console.log('June', 'Youth Day')
 		count = count + 1
   }
@@ -23,7 +23,7 @@ if (date = 2050) {
 	console.log(month, 'Day of Reconciliation')
 	count = count + 3
 
-	if (status = "parent") {
+	if (status == "parent") {
         console.log(month, 'Christmas Day')
 		count = count + 1
   }
@@ -31,6 +31,8 @@ if (date = 2050) {
 	console.log(month, 'Day of Goodwill')
 	count = count + 1
 }
+
+status = "parent"
 
 console.log('Your status is:', status)
 console.log('The year is:', date)
