@@ -13,9 +13,10 @@ let shipping = null;
 const customers = '1'; 
 const customerLocation = 'RSA';
 let usersCost = shoes+toys+shirts+batteries+pens;
-currency = null
+let currency = null
+let withShipping = usersCost + shipping
 
-RSA = ()=> {
+const RSA = ()=> {
     if (customerLocation == 'RSA') {
         currency='R';
         shipping = 400;
@@ -25,27 +26,29 @@ RSA = ()=> {
         if ((usersCost>=1000) && (customers > 1)) {
             console.log(FREE_WARNING);
         }
-    console.log('Price: ',currency, usersCost + shipping);
+    withShipping = usersCost + shipping
+    console.log('Price: ',currency, withShipping);
     }
 }
-RSA();
 
-NAM = ()=> {
+
+const NAM = ()=> {
     if (customerLocation == 'NAM') {
         let currency = '$';
         shipping =600;
-        if ((usersCost>=60) && (customers="1")) {
+        if ((usersCost>=60) && (customers=="1")) {
             shipping = 0;
         }
         if ((usersCost>=60) && (customers > 1)) {
             console.log(FREE_WARNING);
         }
-    console.log('Price: ',currency, usersCost + shipping);
+    withShipping = usersCost + shipping
+    console.log('Price: ',currency, withShipping);
     }
 }
-NAM();
 
-NK = () => {
+
+const NK = () => {
     if (customerLocation == 'NK') {
         console.log(BANNED_WARNIN);
     }
@@ -54,4 +57,12 @@ NK = () => {
         shipping = 800;
     }
 }
-NK();
+
+
+if (customerLocation === 'RSA') {
+    RSA();
+} else if (customerLocation === 'NAM') {
+    NAM();
+} else if (customerLocation === 'NK') {
+    NK();
+}
