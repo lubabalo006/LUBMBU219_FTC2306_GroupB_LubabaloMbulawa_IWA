@@ -9,7 +9,6 @@ const batteries = 35 * 2;
 const pens = 5 * parseInt(NONE_SELECTED);
 
 let shipping = null;
-//let currency = '$';
 
 const customers = '1'; 
 const customerLocation = 'RSA';
@@ -33,6 +32,7 @@ RSA();
 
 NAM = ()=> {
     if (customerLocation == 'NAM') {
+        let currency = '$';
         shipping =600;
         if ((usersCost>=60) && (customers="1")) {
             shipping = 0;
