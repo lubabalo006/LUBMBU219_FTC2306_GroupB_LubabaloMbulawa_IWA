@@ -2,19 +2,19 @@ const FREE_WARNING = 'Free shipping only applies to single customer orders'
 const BANNED_WARNIN = 'Unfortunately we do not ship to your country of residence'
 const NONE_SELECTED = '0'
 
-let shoes = 300 * 1;
-let toys = 100 * 5;
-let shirts = 150 * parseInt(NONE_SELECTED);
-let batteries = 35 * 2;
-let pens = 5 * parseInt(NONE_SELECTED);
+const shoes = 300 * 1;
+const toys = 100 * 5;
+const shirts = 150 * parseInt(NONE_SELECTED);
+const batteries = 35 * 2;
+const pens = 5 * parseInt(NONE_SELECTED);
 
 let shipping = null;
-let currency = '$';
+//let currency = '$';
 
-let customers = '1'; 
-let customerLocation = 'RSA';
+const customers = '1'; 
+const customerLocation = 'RSA';
 let usersCost = shoes+toys+shirts+batteries+pens;
-//currency = null
+currency = null
 
 RSA = ()=> {
     if (customerLocation == 'RSA') {
