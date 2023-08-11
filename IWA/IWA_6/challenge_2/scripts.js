@@ -7,12 +7,13 @@ const hourOfDay = 00;
 const minuteOfDay = 00;
 
 // Only change below this line
-const currency = 'R'
+const currency = 'R';
+const expenses =transport + food + rent;
 
 if ((hourOfDay !== undefined) && (minuteOfDay !== undefined)) {
-    const taxAsDecimal = (salary*parseInt(tax)) / 100
-    const startingAfterTax = salary - taxAsDecimal
-    const balace = startingAfterTax - transport - food - rent
-    console.log(currency + balace.toFixed(2).toString())
+    const taxAsDecimal = parseInt(tax) / 100;
+    const startingAfterTax = salary * (1- taxAsDecimal);
+    const balace = startingAfterTax - expenses;
+    console.log(currency + balace.toFixed(2).toString());
 }
 
