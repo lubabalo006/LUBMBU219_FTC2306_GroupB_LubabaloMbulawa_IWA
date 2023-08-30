@@ -9,9 +9,11 @@ function add(a, b) {
   }
   
   function internal() {
-    const added = this.add(this.internal.a, this.internal.b);
-    const multiplied = this.multiply(this.internal.a, this.internal.b);
-    return added * multiplied;
+    const added = add(this.internal.a, this.internal.b);
+    //console.log(added)
+    return this.multiply(added,this.internal.c)
+    //const multiplied = multiply(this.internal.a, this.internal.b);
+    //return added * multiplied;
   }
   
 
