@@ -164,18 +164,6 @@ function openEditOrderOverlay(orderId) {
     }
 }
 
-// function openEditOrderOverlay() {
-//     const editOverlay = document.querySelector('[data-edit-overlay]');
-//     if (editOverlay) {
-//         editOverlay.open = true;
-//         const titleInput = document.querySelector('[data-edit-title]');
-//         if (titleInput) {
-//             titleInput.focus();
-//         }
-//     }
-// };
-
-
 const grid = document.querySelector('[data-grid]');
 
 grid.addEventListener('click', (event) => {
@@ -205,10 +193,6 @@ function helpOverlay() {
     const help = html.help.overlay
     if (help) {
         help.showModal();
-        // const titleInput = document.querySelector('[data-search-form]');
-        // if (titleInput) {
-        //     titleInput.focus();
-        // }
     }
 }
 
@@ -219,65 +203,3 @@ function cancelOverlay() {
         window.location.reload();
     }
 }
-/*
-
-
-// Attach event listeners to edit buttons
-const editButtons = document.querySelectorAll('[data-edit-title]');
-console.log(editButtons)
-if (editButtons) {
-    editButtons.addEventListener('click', openEditOrderOverlay)
-}
-
-
-/*
-// Function to open the "Edit Order" overlay and pre-fill it with order details
-
-
-/*
-// Function to handle updating an order
-function handleUpdateOrder() {
-    // Get the updated order information from the inputs
-    const editTitleInput = document.querySelector('[data-edit-title]');
-    const editTableInput = document.querySelector('[data-edit-table]');
-    const editIdInput = document.querySelector('[data-edit-id]');
-
-    const updatedTitle = editTitleInput.value;
-    const updatedTable = editTableInput.value;
-    const orderId = editIdInput.value;
-
-    if (updatedTitle && updatedTable && orderId) {
-        // Update the order's details in the HTML
-        const orderElement = document.querySelector(`[data-id="${orderId}"]`);
-        if (orderElement) {
-            // Update the order's title and table in the HTML
-            const order = state.orders[orderId];
-            if (order) {
-                order.title = updatedTitle;
-                order.table = updatedTable;
-                const orderTitleElement = orderElement.querySelector('[data-order-title]');
-                const orderTableElement = orderElement.querySelector('[data-order-table]');
-                if (orderTitleElement && orderTableElement) {
-                    orderTitleElement.textContent = updatedTitle;
-                    orderTableElement.textContent = updatedTable;
-                }
-            }
-        }
-
-        // Update the order's details in the data structure
-        state.orders[orderId].title = updatedTitle;
-        state.orders[orderId].table = updatedTable;
-
-        // Close and clear the "Edit Order" overlay
-        closeAndClearEditOrderOverlay();
-    }
-}
-
-// Function to close and clear the "Edit Order" overlay
-function closeAndClearEditOrderOverlay() {
-    const editOverlay = document.querySelector('[data-edit-overlay]');
-    if (editOverlay) {
-        editOverlay.open = false;
-    }
-}
-*/
